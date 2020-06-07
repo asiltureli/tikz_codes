@@ -1,0 +1,24 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{pgfplots}
+
+\begin{document}
+	\begin{tikzpicture}
+		\begin{axis}[
+		xmax=4, 
+		xmin=-4, 
+		ymin = -0.5, 
+		ymax=1.5, 
+		samples=50, 
+		grid=both,
+		grid style={line width=.2pt, draw=black},
+		width = 8cm,
+		height = 8cm,
+%		xlabel = Binary Step Function
+		]
+		\addplot[red,  ultra thick, domain=-10:0] (x,0);
+		\addplot[red, ultra thick] coordinates {(0,0) (0,1)};
+		\addplot[red,  ultra thick, domain=0:10] (x,1);
+	
+		\end{axis}
+	\end{tikzpicture}
+\end{document}

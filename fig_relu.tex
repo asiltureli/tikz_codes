@@ -1,0 +1,23 @@
+\documentclass[border=2pt]{standalone}
+\usepackage{pgfplots}
+
+\begin{document}
+	\begin{tikzpicture}
+		\begin{axis}[
+		xmax=6, 
+		xmin=-4, 
+		ymin = -1, 
+		ymax=6, 
+		samples=50, 
+		grid=both,
+		grid style={line width=.2pt, draw=black},
+		width = 8cm,
+		height = 8cm,
+%		,xlabel = Rectified Linear Unit (ReLU)
+		]
+		\addplot[red,  ultra thick, domain=-10:0] (x,0);
+		\addplot[red,  ultra thick, domain=0:10] (x,x);
+	
+		\end{axis}
+	\end{tikzpicture}
+\end{document}

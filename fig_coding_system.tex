@@ -1,0 +1,15 @@
+\documentclass[10pt]{amsart}
+\usepackage{tikz}
+
+\begin{document}
+\usetikzlibrary{graphs}
+\begin{tikzpicture}[node distance = 2cm, 
+auto, x=1cm, y=1cm,scale=1, transform shape, box/.style={rectangle,draw,minimum size = 15mm},>=stealth];
+\centering
+\node (encoder) at (2,0) [box] {Encoder};
+\node (decoder) at (6,0) [box] {Decoder};
+\draw [->] (-1.5,0) -- node[text width = 3cm,align=center,anchor=center]{Uncompressed\\Video}(encoder);
+\draw [->] (encoder) -- node[above]{Bitstream}(decoder);
+\draw [->] (decoder) -- node[align=center,anchor=center]{Reconstructed\\Video}(9.5,0);
+\end{tikzpicture}
+\end{document}
